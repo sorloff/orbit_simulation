@@ -103,7 +103,7 @@ class Orbital_Engine:
 
 
 		print("about to run...")
-		self.animation = FuncAnimation(fig, update, frames=1000, interval=0.1)
+		self.animation = FuncAnimation(fig, update, frames=1000, interval=1)
 		#self.animation.save('orbit_test.mp4', dpi="figure", bitrate=5000)
 		plt.show()
 		print("that's all folks")

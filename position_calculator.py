@@ -3,7 +3,7 @@ import math
 
 #the gravitational constant
 G = 6.673e-11
-t = 1e-5#0.00001 #delta t
+t = 5e-6#0.00001 #delta t
 
 #calculates the next location of the objects for each frame
 #equation used is verlet velocity scheme
