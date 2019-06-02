@@ -93,7 +93,7 @@ class Orbital_Engine:
 
 
 		def update(frame):
-			for _ in range(1000):
+			for _ in range(10):
 				calc_position(self.objs)
 			for row in self.objs: #TODO: this can probably run faster
 				patches = plt.gca().patches

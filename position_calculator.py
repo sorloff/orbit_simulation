@@ -10,7 +10,7 @@ G = 6.673e-11
 #delta t
 #TODO: speed up calc, up this factor and only display every x frames to decrease error
 #t = 5e-6 
-t = 10
+t = 100
 
 #calculates the next location of the objects for each frame
 #equation used is verlet velocity scheme
