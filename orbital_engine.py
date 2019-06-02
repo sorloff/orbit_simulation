@@ -57,7 +57,8 @@ class Orbital_Engine:
 		self.objs["loc"] = np.asarray([[5e8, 5e8], [6.925e8, 3.075e8]])
 		
 		#self.objs["vel"]    = np.random.uniform(-1e2, 1e3, (count, 2))
-		self.objs["vel"] = np.asarray([[0, 0], [2022e8, 2022e8]])
+		#self.objs["vel"] = np.asarray([[0, 0], [2022e8, 2022e8]])
+		self.objs["vel"] = np.asarray([[0, 0], [723, 723]])
 
 		#self.objs["radius"] = np.random.uniform(100, 1000, count)
 		self.objs["radius"] = np.asarray([[6.371008e6, 1.7374e6]])
@@ -92,14 +93,18 @@ class Orbital_Engine:
 
 
 		def update(frame):
-			calc_position(self.objs)
+			for _ in range(1000):
+				calc_position(self.objs)
 			for row in self.objs: #TODO: this can probably run faster
 				patches = plt.gca().patches
+				#remove previously painted object
+				#speeds up simulation
 				if (len(patches) >= 2):
 					patches[-1].remove()
 				obj = plt.Circle(row["loc"], row["radius"], color="white")
 				plt.gca().add_patch(obj)
-			print(self.objs)
+			#print(self.objs)
+			#print("frame")
 
 
 		print("about to run...")
